@@ -1,1 +1,3 @@
-Created automatically using create-github
+## N-Queens solver
+Solves N-Queens problem recursively.
+Shows recursive solution in console
