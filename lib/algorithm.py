@@ -10,6 +10,7 @@ def init(n,show_steps=False,delay=0):
     clear()
     x = [-1]*n
     if show_steps == False:
+        print('Solving... Please wait')
         if solve(0,n,x):
             return x
         return None
