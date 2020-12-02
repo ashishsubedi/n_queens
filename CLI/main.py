@@ -8,10 +8,19 @@ sys.path.append(lib_path)
 import algorithm
 
 def start():
-    # n = int(input("Size of n: "))
-    n=4
-    show_steps = True
-    x = algorithm.init(n,show_steps,delay=0.1) 
+    n = int(input("Size of n: "))
+
+
+    show_steps = input('Show steps[y/n]: ')
+    if 'y' in show_steps.lower():
+        show_steps = True
+    elif 'n' in show_steps.lower():
+        show_steps = False
+    
+    if n<8: delay = 0.05 
+    else: delay = 0
+
+    x = algorithm.init(n,show_steps,delay=delay) 
     if x is None:
         print("board is not solvable")
         return
