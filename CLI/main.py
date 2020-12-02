@@ -1,9 +1,17 @@
-import pprint
+import sys
+import os
+
+lib_path = os.path.abspath(os.path.join(__file__,'..','..','lib'))
+
+sys.path.append(lib_path)
+
 import algorithm
 
 def start():
-    n = 8
-    x = algorithm.init(n) 
+    # n = int(input("Size of n: "))
+    n=4
+    show_steps = True
+    x = algorithm.init(n,show_steps,delay=0.1) 
     if x is None:
         print("board is not solvable")
         return
