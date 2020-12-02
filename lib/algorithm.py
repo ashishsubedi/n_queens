@@ -38,7 +38,7 @@ def solve_show_steps(k,n,x,board):
     if (k == n):
         return True
     for i in range(n):
-        if place(k,i,x):
+        if place(k,i,x,board):
             
             x[k] = i
             board[k][i] = 'X'
@@ -53,8 +53,9 @@ def solve_show_steps(k,n,x,board):
 
 def place (k,i,x,board = None):
     if board is not None:
-        board[k][i] = 'C'
+        board[k][i] = '■'
         print_board(board)
+        
         board[k][i] = '_'
         print_board(board)
     for j in range(k):
@@ -67,9 +68,10 @@ def place (k,i,x,board = None):
 def print_board(board):
     clear()
     for i in board:
+        # time.sleep(slow_rate)
         
-        print(" ".join(i))        
-        time.sleep(slow_rate)
+        print(" ".join(i))   
+    time.sleep(slow_rate)     
 
 
 

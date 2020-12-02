@@ -14,11 +14,13 @@ def start():
     show_steps = input('Show steps[y/n]: ')
     if 'y' in show_steps.lower():
         show_steps = True
-    elif 'n' in show_steps.lower():
+    else:
         show_steps = False
     
-    if n<8: delay = 0.05 
-    else: delay = 0
+    if n<6: delay = 0.05
+    else: delay = 0.005
+  
+
 
     x = algorithm.init(n,show_steps,delay=delay) 
     if x is None:
